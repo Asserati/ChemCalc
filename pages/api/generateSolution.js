@@ -17,5 +17,5 @@ export default async function (req, res) {
 }
 
 function generatePrompt(labels, findUnit) {
-  return `Solve only in chemistry terms: I have given these units " ${labels} ", and I need to find " ${findUnit}". Please show the formulas and the calculations with operation symbols. Don't write anything unnecessary`;
+  return `Solve only in chemistry terms: I have given these units " ${labels} "  with given element in "()", and I need to find " ${findUnit}". Please show the formulas and the calculations with operation symbols. Don't write anything unnecessary`;
 }
