@@ -7,8 +7,7 @@ const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
   const { conceptWord, randomQuestion } = req.body;
-  const random = Math.floor(Math.random() * (200 - 0 + 1));
-  console.log(random);
+
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: generatePrompt(conceptWord, randomQuestion),
