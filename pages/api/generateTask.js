@@ -17,5 +17,5 @@ export default async function (req, res) {
 }
 
 function generatePrompt(conceptWord, randomQuestion) {
-  return `Im a high-school pupil and Im trying to learn chemisty. The subject that Im learning is ${conceptWord}. Can you generate me task to solve related to it? It has to be direct`;
+  return `Im a high-school pupil and Im trying to learn chemisty. The subject that Im learning is ${conceptWord}. Please generate a task to solve related to it. For example ${randomQuestion}.`;
 }
