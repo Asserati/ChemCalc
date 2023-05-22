@@ -16,7 +16,7 @@ export default async function (req, res) {
     temperature: 0,
     max_tokens: 2048,
   });
-  res.status(200).json({ result: completion.data.choices[random].text });
+  res.status(200).json({ result: completion.data.choices[0].text });
 }
 
 function generatePrompt(conceptWord, randomQuestion) {
