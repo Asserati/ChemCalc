@@ -7,13 +7,14 @@ const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
   const { conceptWord, randomQuestion } = req.body;
+  const random = Math.floor(Math.random() * (200 - 0 + 1));
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: generatePrompt(conceptWord, randomQuestion),
     temperature: 0,
     max_tokens: 2048,
   });
-  res.status(200).json({ result: completion.data.choices[0].text });
+  res.status(200).json({ result: completion.data.choices[random].text });
 }
 
 function generatePrompt(conceptWord, randomQuestion) {
