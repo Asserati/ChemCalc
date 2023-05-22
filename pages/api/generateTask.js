@@ -17,5 +17,5 @@ export default async function (req, res) {
 }
 
 function generatePrompt(concept) {
-  return `Generate an equation/task for chemistry high-school students to learn ${concept}. A bit harder one to solve.`;
+  return `Generate an equation/task to learn chemistry for high-school students in this subject " ${concept} " related. A bit harder one to solve.`;
 }
