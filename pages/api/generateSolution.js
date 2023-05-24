@@ -17,6 +17,5 @@ export default async function (req, res) {
 }
 
 function generatePrompt(labels, findUnit) {
-  return `Solve only in chemistry terms: I have given these units " ${labels}, N A - Avogadro constant =
-  6,02 x 1023, V M - Avogadro constant = 22,4 l/mol "  with given element in "()", and I need to find " ${findUnit}". Please show the formulas and the calculations with operation symbols. Don't write anything unnecessary`;
+  return `Solve only in chemistry terms: I have given these units "${labels}"  with given element in "()", and I need to find " ${findUnit}". Please show the formulas and the calculations with operation symbols. Don't write anything unnecessary`;
 }
